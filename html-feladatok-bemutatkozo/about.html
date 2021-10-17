@@ -5,40 +5,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/about.css">
     <title>Document</title>
 </head>
 
 <body>
     <header id="home">
         <div>
-            <h3>Rólam</h3>
+            <h1>Rólam</h1>
         </div>
 
     </header>
     <nav>
-        <ul>
-            <li> <a href="index.html">Fő oldal</a> </li>
-            <li> <a href="works.html">Munkáim</a> </li>
-            <li> <a href="gallery.html">Galéria</a> </li>
-            <li> <a href="about.html">Rólam</a> </li>
-        </ul>
+        <div class="topnav">
+            <a href="index.html">Fő oldal</a> 
+            <a href="works.html">Munkáim</a>
+            <a href="gallery.html">Galéria</a>
+            <a class="active" href="about.html">Rólam</a>
+        </div>
     </nav>
 
     <main>
         <section>
             <article>
-    
+
             </article>
+        </section>
+        <section>
+            <form action="">
+
+            </form>
         </section>
     </main>
 
+    <div >
+        <form id="uzenoForm">
+            <fieldset style="display: inline-block;">
+                <legend>Üzenet küldése</legend>
+                <div>
+                    <label for="name"> Név * </Label>
+                    <input id="name" name="name" spaceholder="Szabó Zsolt" type="text" required>
+                </div>
+                <div>
+                    <label for="email"> Email *</Label>
+                    <input id="email" name="email" type="text" required>
+                </div>
+                <div>
+                    <label for="uzenet"> Üzenet szövege</Label>
+                    <textarea id="uzenet" name="megjegyzes" rows=5></textarea>
+                </div>
+                <button onclick="uzenetKuldes()" type="submit">Küldés</button>
+            </fieldset>
+        </form>
+    </div>
+
     <footer>
-        <ul>
-            <li> <a href="#home">Visza az oldal tetejére</a> </li>
+        <ul style="cursor: pointer; list-style: none;">
+            <li> <div><a href="#home">Visza az oldal tetejére</a></div> </li>
         </ul>
     </footer>
 
-
+    <script src="./js/about.js"></script>
 </body>
 
 </html>
