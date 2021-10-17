@@ -1,31 +1,57 @@
 .topnav {
-    overflow: hidden;
+    overflow        : hidden;
     background-color: #333;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    /* display      : flex;
+    flex-wrap       : nowrap;
+    flex-direction  : column; */
+}
+
+.topnav a {
+    float          : left;
+    color          : #f2f2f2;
+    text-align     : center;
+    padding        : 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
+    font-size      : 17px;
+}
+
+.topnav a:hover {
     background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
+    color           : black;
+}
+
+.topnav a.active {
     background-color: #04AA6D;
-    color: white;
-  }
+    color           : white;
+}
 
 h1 {
     text-align: left;
 }
 
+.fenykepek img {
+    margin: 10px;
+    width : 200px;
+}
+
+article {
+    margin    : 10px;
+    text-align: justify;
+}
+
+article h3 {
+    text-decoration: underline;
+}
+
+form {
+    margin: 10px;
+}
+
+form textarea {
+    width: 100%;
+}
+
 form#uzenoForm input {
-margin-bottom:5px;
+    width        : 100%;
+    margin-bottom: 5px;
 }
