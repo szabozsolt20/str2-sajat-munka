@@ -1,27 +1,66 @@
 .topnav {
-    overflow: hidden;
+    overflow        : hidden;
     background-color: #333;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+}
+
+.topnav a {
+    float          : left;
+    color          : #f2f2f2;
+    text-align     : center;
+    padding        : 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
+    font-size      : 17px;
+}
+
+.topnav a:hover {
     background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
+    color           : black;
+}
+
+.topnav a.active {
     background-color: #04AA6D;
-    color: white;
-  }
+    color           : white;
+}
 
 h1 {
     text-align: left;
+}
+
+.tartalom {
+    display: flex;
+}
+
+.tartalom div {
+    margin: 3px;
+    width : 50%;
+}
+
+.tartalom img {
+    /* height: auto; */
+    width: 85%;
+}
+
+.tulajdonsagok {
+    height        : 150px;
+    font-size     : xx-large;
+    text-align    : center;
+    align-items   : center;
+}
+
+.tulajdonsagok div {
+    height          : 80%;
+    background-color: bisque;
+    
+}
+
+#tetejereGomb {
+    text-decoration : none;
+    padding         : 8px;
+    background-color: aquamarine;
+    border-radius   : 5px;
+    box-shadow: 3px 3px 4px;
+}
+
+#tetejereGomb:active {
+    padding: 6px;
 }
