@@ -1,0 +1,25 @@
+.sor {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sor div {
+    margin: 0 15px;
+    background-color: azure;
+    /* flex: 30%; */
+    width: 100%;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+img {
+    box-shadow: 5px 5px 2px darkgrey;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .sor {
+        flex-direction: column;
+    }
+}
