@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <!-- <script src="https://use.fontawesome.com/6547fdb967.js"></script> -->
+    <link rel="stylesheet" href="./assets/css/main_header.css">
+    <link rel="stylesheet" href="./assets/css/main_main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
     <title>Document</title>
 </head>
+
 <body>
-    
+    <header class="header--dark">
+        <div class="header__title">
+            <h3 class="header__title">Admin Page</h3>
+            <i class="fa fa-bars" aria-hidden="true" style="margin-left: 5.5em;"></i>
+        </div>
+        <div class="header__search">
+            <input type="text" class="search__input" placeholder="Search for...">
+            <button class="search__btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <i class="fa fa-user" aria-hidden="true" style="margin-left: 15px;"></i>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <div class="aside">
+
+                <aside>
+                    <nav class="main__nav">
+                        <ul class="nav__ul">
+                            <li><a href="#">CORE</a></li>
+                            <li><i class="fa fa-tachometer" aria-hidden="true"></i><a href="#">Dashboard</a></li>
+                            <li><a href="#">INTERFACE</a></li>
+                            <li><i class="fa fa-windows" aria-hidden="true"></i><a href="#">Layouts</a><i
+                                    class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                            <!-- <i class="fa fa-columns" aria-hidden="true"></i> -->
+                            <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="#">Pages</a><i
+                                    class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                            <li><a href="#">ADDONS</a></li>
+                            <li><i class="fa fa-area-chart" aria-hidden="true"></i><a href="#">Charts</a></li>
+                            <li><i class="fa fa-table" aria-hidden="true"></i><a href="#">Tables</a></li>
+                        </ul>
+
+                    </nav>
+                </aside>
+
+            </div>
+            <div class="section">
+
+                <section>
+                    <h1>Dashboard</h1>
+                    <div class="main__breadcrumb">
+                        Dashboard
+                    </div>
+                    <div class="main__cards">
+                        <div class="main__card main__card--blue">
+                            <div class="card__top">Primary Card</div>
+                            <div class="card__bottom"><span>View Details</span> <i class="fa fa-chevron-right"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                        <div class="main__card main__card--yellow">
+                            <div class="card__top">Warning Card</div>
+                            <div class="card__bottom"><span>View Details</span> <i class="fa fa-chevron-right"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                        <div class="main__card main__card--green">
+                            <div class="card__top">Success Card</div>
+                            <div class="card__bottom"><span>View Details</span> <i class="fa fa-chevron-right"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                        <div class="main__card main__card--red">
+                            <div class="card__top">Danger Card</div>
+                            <div class="card__bottom"><span>View Details</span> <i class="fa fa-chevron-right"
+                                    aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+
 </body>
+
 </html>
