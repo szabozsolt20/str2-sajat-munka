@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    /* z-index: 1; */
+    /* Sit on top */
+    /* padding-top: 100px; */
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    /* overflow: auto; */
+    /* Enable scroll if needed */
+    /* background-color: rgb(0,0,0);  Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    box-sizing: border-box;
+
+}
+
+/* Modal Content */
+.modal-content {
+    /*     display: inline-block;
+    align-items: center;
+ */
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 50%;
+    /* height: 50%; */
+}
+
+.modal-content-be {
+    animation-name: megjelenes;
+    animation-duration: 1s;
+}
+
+.modal-content-ki {
+    animation-name: eltunes;
+    animation-duration: 1s;
+}
+
+@keyframes megjelenes {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes eltunes {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+
+    to {
+        top: -300px;
+        opacity: 1;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+    position: relative;
+    top: -3rem;
+    left: 1.3rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn {
+    min-width: 6rem;
+    min-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.gombok {
+    float: right;
+    width: 7rem;
+    height: 3rem;
+    opacity: .7;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    border: 0;
+    margin: 20px 5px;
+}
+
+.gombok#Ok {
+    background-color: green;
+}
+
+.gombok#Cancel {
+    background-color: red;
+}
+
+
+@media screen and (max-width: 560px) {
+    .modal-content {
+        width: 100%;
+    }
+}
