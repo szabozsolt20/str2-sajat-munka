@@ -1,0 +1,32 @@
+body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-sizing: border-box; */
+    padding: 30px;
+    height: 80vh;
+    width: 80vw;
+}
+
+.keret {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: red;
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+}
+
+.cella {
+    width: 32%;
+    height: 32%;
+    background-color: blue;
+    border: 1px solid black;
+    font-size: 4rem;
+    color: beige;
+text-align: center;
+}
