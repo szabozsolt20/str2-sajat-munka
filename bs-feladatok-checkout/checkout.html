@@ -65,9 +65,10 @@
                     <div class="form-row">
                         <div class="form-group col-sm-5">
                             <label for="inputCountry">Country</label>
-                            <select id="inputCountry" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
+                            <select id="inputCountry" class="form-control" onchange="myFunction()">
+                                <option selected value="Choose...">Choose...</option>
+                                <option value="Magyarország">Magyarország</option>
+                                <option value="USA">USA</option>
                             </select>
                         </div>
                         <div class="form-group col-sm-4 pl-sm-4">
@@ -81,6 +82,7 @@
                             <label for="inputZip">Zip</label>
                             <input type="text" class="form-control" id="inputZip">
                         </div>
+                        <button type="button" onclick="myFunction()">Insert option</button>
                     </div>
 
                     <!-- Shipping és save checkbox-ok  -->
@@ -150,7 +152,7 @@
 
 
                     <!-- Submit gomb -->
-                    <button type="submit" class="btn btn-primary w-100 mt-4">Continue to checkout</button>
+                    <button type="submit" onclick="myFunction()" class="btn btn-primary w-100 mt-4">Continue to checkout</button>
                 </form>
 
             </div>
