@@ -3,7 +3,7 @@ const countries = {
   'USA': ['Alabama', 'Alaszka', 'Arizona', 'Arkansas', 'Colorado', 'Connecticut', 'Delaware', 'Dél-Dakota', 'Dél-Karolina', 'Észak-Dakota', 'Észak-Karolina', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kalifornia', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New York', 'Nyugat-Virginia', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'Tennessee', 'Texas', 'Új-Mexikó', 'Utah', 'Vermont', 'Virginia', 'Washington', 'Wisconsin', 'Wyoming']
 }
 
-function myFunction() {
+function optionPopulate() {
   const orszag = document.querySelector('#inputCountry');
   const megye = document.querySelector('#inputState');
 
@@ -16,7 +16,13 @@ function myFunction() {
   countries[orszag.value].map(item => {
     const option = document.createElement("option");
     option.textContent = item;
-    /* https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_add */
     megye.add(option);
   });
 }
+/* https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_add
+  https://electrictoolbox.com/javascript-add-options-html-select/ 
+  https://pretagteam.com/question/how-to-populate-the-options-of-a-select-element-in-javascript
+  https://www.w3schools.com/jsref/dom_obj_select.asp 
+  https://www.w3schools.com/jsref/met_select_add.asp
+  https://www.w3schools.com/jsref/dom_obj_event.asp
+*/

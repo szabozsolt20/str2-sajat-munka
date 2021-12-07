@@ -65,7 +65,7 @@
                     <div class="form-row">
                         <div class="form-group col-sm-5">
                             <label for="inputCountry">Country</label>
-                            <select id="inputCountry" class="form-control" onchange="myFunction()">
+                            <select id="inputCountry" class="form-control" onchange="optionPopulate()">
                                 <option selected value="Choose...">Choose...</option>
                                 <option value="Magyarország">Magyarország</option>
                                 <option value="USA">USA</option>
@@ -82,7 +82,11 @@
                             <label for="inputZip">Zip</label>
                             <input type="text" class="form-control" id="inputZip">
                         </div>
-                        <button type="button" onclick="myFunction()">Insert option</button>
+
+                        <!--  https://electrictoolbox.com/javascript-add-options-html-select/ 
+						https://www.w3schools.com/jsref/dom_obj_select.asp 
+                        https://www.w3schools.com/jsref/met_select_add.asp
+                        https://www.w3schools.com/jsref/dom_obj_event.asp -->
                     </div>
 
                     <!-- Shipping és save checkbox-ok  -->
@@ -152,7 +156,8 @@
 
 
                     <!-- Submit gomb -->
-                    <button type="submit" onclick="myFunction()" class="btn btn-primary w-100 mt-4">Continue to checkout</button>
+                    <button type="submit" onclick="myFunction()" class="btn btn-primary w-100 mt-4">Continue to
+                        checkout</button>
                 </form>
 
             </div>
