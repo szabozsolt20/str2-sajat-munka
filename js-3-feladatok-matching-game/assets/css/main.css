@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+/*A középre helyezéshez:*/
+body {
+  display: flex;
+  flex-direction: column;
+  color: azure;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(131, 210, 227);
+}
+
+h1,
+h2,
+p {
+  font-family:'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3vmax;
+}
+
+h2 {
+  font-size: 2vmax;
+}
+
+p {
+  font-size: 2.5vmax;
+}
+
+/*GRID SECTION*/
+.grid-container-alap {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+  background-color: rgb(131, 210, 227);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 10vmin;
+
+  /* 5db egyforma széles oszlopom legyen */
+  /* a grid elemek közötti rés */
+  /*     width: 50%; */
+}
+
+/*FLIPCARD SECTION*/
+.flip-card {
+  text-align: center;
+  transition: transform .5s ease-in-out;
+  transform-style: preserve-3d;
+  width: 9vw;
+  height: 20vh;
+}
+
+.forgat-oda {
+  transform: rotateY(180deg);
+}
+
+.forgat-vissza {
+  transform: rotateY(0deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  display: flex;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: black;
+  color: white;
+}
+
+.flip-card-back {
+
+  background-color: white;
+  transform: rotateY(180deg);
+  color: black;
+}
+
+.flip-card-front:Hover {
+  background: red;
+}
+
+
+/* -----------------------------ETTŐL LENTEBB NINCS TÖBB KÓD-----------------------------------------
+Ha jól értem a flip-card lényegét:
+Azon alapul, hogy két div-ben tárolt képet lehet forgatni egy külső befoglaló div segítségével.
+Az egyik kép eleve pi-vel fordított(transform: rotateY(180deg);) a másikhoz képest, és együtt forgatom őket a közös konténerrel 
+(de azért külön-külön is div-ben vannak talán a formázhatóság miatt), tehát, hol az egyik, hol a másik van "felfelé".
+Ahhoz, hogy ez így is látszódjon: kell a
+backface-visibility: hidden; és talán a:
+  display: flex;
+  position: absolute;
+
+  ez pedig, hogy kitöltsék a konténereiket a képek/ikonok:
+  width: 100%; 
+  height: 100%;
+
+mind a két konténerre, amik a képet tartalmazzák.
+...és akkor váltogatom az alábbi osztályokat a befoglaló konténereken:
+.forgat-oda {
+  transform: rotateY(180deg);
+}
+
+.forgat-vissza {
+  transform: rotateY(0deg);
+}
+
+https://www.google.co.uk/search?q=css+simplest+%22flip+card%22
+https://codepen.io/flosing/pen/NWpqgdG
+(https://jefferson-cuartas.medium.com/how-to-create-a-flip-card-effect-using-javascript-767dd945210c)
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
+
+https://www.w3schools.com/jsref/prop_element_classlist.asp
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY()
+
+https://www.google.co.uk/search?q=font+awesome+flip-card
+https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/rotating-icons
+ */
+
+
+/* KORÁBBI PRÓBÁLKOZÁSOK:
+
+#button{
+   display: none;
+ }
+ */
+/* body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    height: 80vh;
+    width: 80vw;
+} */
+/* box-sizing: border-box; */
+
+/*
+i {
+  transition-delay: 4s; 
+  transition-duration: 2s;
+}*/
+
+/*
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+#card {
+  max-width: 100%;
+  perspective: 1000px;
+  margin: 25px;
+}
+*/
+  /*
+.flip-card {
+  border          : 1px solid black;
+  border-radius   : 20px; 
+  display         : inline-block;
+  position        : relative;
+  transform-origin: 50% 50%;
+  width           : 230px;
+  height          : 400px;
+  font-size       : 5rem;
+ */
+  /*
+
+ .flip-card-front,
+ .flip-card-back {
+   font-size     : 10vh;
+   top           : 0;
+   left          : 0;
+ }
+ */
