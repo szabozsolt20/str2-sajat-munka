@@ -1,8 +1,11 @@
 const sortData = data => data.sort((a, b) => {
     let x = a.name.split(' ');
     let y = b.name.split(' ');
-
-    return x[x.length - 1].toUpperCase() <= y[y.length - 1].toUpperCase() ? -1 : 1;
+    replaceDemand = x[x.length - 1].toUpperCase() <= y[y.length - 1].toUpperCase() ? -1 : 1; //rendezés vezetéknévre
+    if (x[x.length - 1].toUpperCase() == y[y.length - 1].toUpperCase()) {//rendezés azonos vezetéknéven belül
+        replaceDemand = (x[0].toUpperCase() < y[0].toUpperCase()) ? -1 : 1;
+    }
+    return replaceDemand;
 }
 );
 
@@ -102,13 +105,13 @@ const getRoles = async () => {
     //console.log(roleArr);
     //addClickListener();
 
-    
+
 }
 
 
-function inputEnter({key}){
+function inputEnter({ key }) {
     //console.log(key);
-    if (key=='Enter') {showDetails.call(this);}
+    if (key == 'Enter') { showDetails.call(this); }
 }
 
 document.querySelector(".searchButton").addEventListener('click', showDetails);

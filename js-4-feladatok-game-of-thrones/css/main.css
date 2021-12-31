@@ -57,6 +57,9 @@ body {
 
 /*Details-aside*/
 
+h3 {
+    font-weight: lighter;
+}
 .role-aside {
   /* border: 1px solid red; */
   width: 20%;
@@ -67,13 +70,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-items: center;
-
 }
 
 .roleDetails {
   /* border: 1px solid red; */
   font-family: game;
-
 }
 
 .roleName {
