@@ -1,0 +1,143 @@
+@font-face {
+  font-family: got;
+  src: url(../assets/fonts/got.ttf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* kb ???hatása, de csak így marad 8 db, a roleDiv-nál is szerepeltethető, csak akkor scroll-os lesz teljes képernyőnyél */ 
+  font-family: got;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.roles-main {
+  /* border: 1px solid red; */
+  background-image: url('../assets/site/mapblue.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  padding-bottom: 30px;
+}
+
+.roleDiv {
+
+  text-align: center;
+  width: 12%;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.roleDiv:hover {
+  transform: scale(1.2);
+}
+.actualDiv {
+  transform: scale(1.2);
+}
+
+.name:hover {
+  cursor: pointer;  
+  background-color: burlywood;
+}
+
+.portrait {
+  width: 7vmin;
+}
+
+
+
+/*Details-aside*/
+
+.role-aside {
+  /* border: 1px solid red; */
+  width: 20%;
+  padding-top: 10px;
+  background: rgb(55, 55, 55);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+}
+
+.roleDetails {
+  /* border: 1px solid red; */
+  font-family: game;
+
+}
+
+.roleName {
+  padding: 1vh;
+  font-size: smaller;
+  padding-left: 25px;
+  float: left;
+}
+
+.roleBio {
+  display: inline-block;
+  padding: 5px 5px 5px 25px;
+  font-family: cursive;
+  text-align: justify;
+}
+
+.rolePicture {
+  width: 99%;
+  float: left;
+  padding: 10px 0 5px 25px;
+}
+
+.roleHousePicture {
+  padding-right: 5px;
+  float: right;
+  width: 30px;
+}
+
+
+
+.search__box {
+/* border: 1px solid red; */
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  max-width: 19%;
+  display: flex;
+  height: 50px;
+  /* float: right; */
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.searchButton {
+  /* margin-right: 0; */
+  font-size: larger;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  background: whiter;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchInput {
+  font-family: cursive;
+  margin-left: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  line-height: 40px;
+  max-width: 80%;
+
+}
