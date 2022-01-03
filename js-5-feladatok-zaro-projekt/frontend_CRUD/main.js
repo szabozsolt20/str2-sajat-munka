@@ -48,7 +48,7 @@ function startGetUsers(action) {
 }
 
 //ÚJRARAJZOLJA A TÁBLÁT A SZERVERRŐL AKTUÁLISAN LEKÉRT ADATOKKAL IS FELTÖLTVE 
-const fillDataTable = (data, tableID, action) => { 
+const fillDataTable = (data, tableID, action) => {
   let table = document.querySelector(`#${tableID}`);
   if (!table) { console.error(`Table ${tableID} is not found`); return; }
   let tBody = table.querySelector("tbody");
@@ -78,7 +78,7 @@ const fillDataTable = (data, tableID, action) => {
       if (ps) { input.setAttribute("style", "background-color: white; border-color: white;"); }
       else { input.setAttribute("style", "background-color: rgb(242,242,242); border-color: rgb(242,242,242);"); }
 
-      //if (key == "id") { //todo: kirajzoláskor egyik sem szerkeszthető, csak a szerkesztés gombra válik azzá
+      //if (key == "id") { // kirajzoláskor egyik sem szerkeszthető, csak a szerkesztés gombra válik azzá
       input.setAttribute("readonly", true);
       input.addEventListener("input", inputValidator);
       //}
@@ -210,7 +210,19 @@ function setRow(btn) {
   let buttons = table.querySelectorAll('button');
   buttons.forEach(element => {
     if ((element !== saveBtn) && (element !== redoBtn)) {
-      element.disabled = true
+      //element.disabled = true; // ehelyett itt tényleg uyganazt az error modalt használom fel "újrafestve" 
+      element.onclick = function () {
+        document.querySelector("#errorModal .modal-body").innerHTML="Először be kell fejezned az aktuális szerkesztést!"
+        document.querySelector("#errorModalLabel").innerHTML="TÜRELEM! :-)!"
+        $('#errorModal').modal({ backdrop: 'static' });
+
+        setTimeout(() => {
+          $('#errorModal').modal('toggle');
+          document.querySelector("#errorModal .modal-body").innerHTML="A kitöltött adatmezők nem elfogadható értékekeket tartalmaznak."
+          document.querySelector("#errorModalLabel").innerHTML="HIBÁS BEVITELI ADATOK!"
+
+        }, 5000);
+      };
     }
   });
 
@@ -278,9 +290,11 @@ function validator(data) {
     }
   }
 
-//https://getbootstrap.com/docs/4.5/components/modal/#options
-//https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
-  if (valid) {
+  //https://getbootstrap.com/docs/4.5/components/modal/#options
+  //https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+  if (valid) {  //todo: ez esetleg a html-ben egy modal-lal is megoldható, ha itt csak az osztályokat cserélem le benne a meghívás előtt.
+    //todo: ...mint ahogy a szerkesztés kikattintós hibaüzenetnél. Nem is tudom, nekem így, ha csak kettő van, áttekinthetőbb a HTML-ben...
+
     $('#successModal').modal({ backdrop: 'static' });
     setTimeout(() => $('#successModal').modal('toggle'), 5000);
   } else {
@@ -300,13 +314,14 @@ function inputValidator() {
   };
 
   let valid = true;
-    if (v[this.name].test(this.value)){
-      this.setAttribute("style","border-color: inherit;" )}
-       else {
-        this.setAttribute("style","border-color: red;" )
-      }
-
+  if (v[this.name].test(this.value)) {
+    this.setAttribute("style", "border-color: inherit;")
   }
+  else {
+    this.setAttribute("style", "border-color: red;")
+  }
+
+}
 
 //Mégsem gomb hatására visszaíródnak az eredeti értékek:
 function redoRow(tr, oldData) { //megkapom a buttont(this-ként), tr-jét, és eredeti adatsorát)
