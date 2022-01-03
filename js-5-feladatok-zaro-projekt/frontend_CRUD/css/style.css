@@ -1,0 +1,14 @@
+.container {
+  margin-top: 20px;
+}
+
+.form-control:focus { 
+/*   https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* table {
+  background: url("../darazsak.jpg");
+} */
