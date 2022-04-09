@@ -10,7 +10,7 @@ cellak.forEach(item => {
             if (item.innerHTML == "") {
                 a++;
                 item.textContent = jel[a % 2];
-                jel[a % 2];
+                //jel[a % 2];
                 ellenorzes(jel[a % 2])
             }
         })
