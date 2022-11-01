@@ -1,12 +1,12 @@
 .sor {
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; *//*  2020.11.01. */
 }
 
 .sor div {
     margin: 0 15px;
-    background-color: azure;
-    /* flex: 30%; */
+  /*  background-color: azure;
+     flex: 30%; */
     width: 100%;
     text-align: center;
     line-height: 75px;
